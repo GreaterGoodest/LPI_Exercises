@@ -12,7 +12,7 @@ int main(){
     char *buff[BUFF_SIZE];
     ssize_t write_count = 0;
 
-    memset(buff, 'A', 4096);
+    memset(buff, 'A', BUFF_SIZE);
 
     out_fd = open("out_file.txt", O_WRONLY | O_CREAT | O_EXCL, S_IRUSR | S_IWUSR);
     write_count = write(out_fd, buff, BUFF_SIZE);
